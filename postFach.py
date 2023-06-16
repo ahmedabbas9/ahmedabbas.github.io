@@ -22,11 +22,11 @@ def Inbox_Importieren() :
     nameSpace  = outlook.GetNamespace("MAPI")
 
 
-    wb = xlwings.Book("C:\\Users\\z004kp3D\\Desktop\\Repo\\Postfach - Kopie.xlsm")
+    wb = xlwings.Book("Path")
     
     ws = wb.sheets[0]
     
-    account = nameSpace.CreateRecipient("ba.em_hp_ais_ops_b.energy@siemens-energy.com")
+    account = nameSpace.CreateRecipient("yourMail")
     olFolderInbox = 6
     ordner = nameSpace.GetSharedDefaultFolder(account, olFolderInbox)
     #inbox = account.Folders.Item("Inbox")
